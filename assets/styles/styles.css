@@ -21,27 +21,40 @@ body {
     display: block;
 }
 
+h1 {
+    font-size: 2.4em;
+    margin: 20px 0;
+}
+
 h2 {
     font-size: 1.2em;
+}
+
+h3 {
+    font-size: 1em;
 }
 
 input, select, input[type="radio"] + label, input[type="checkbox"] + label {
     width: 100%;
     padding: 10px;
-    margin-top: 10px;
+    margin: 10px 0 10px 0;
     font-size: 1em;
     box-sizing: border-box;
 }
 
 input[type="radio"], input[type="checkbox"] {
     width: auto;
-    margin-right: 10px;
+    margin-right: 0px;
 }
 
+.options{
+    margin: 10px;
+    padding: 10px;
+}
 button {
     display: block;
     width: 100%;
-    margin-top: 20px;
+    margin: 20px 0 20px 0;
     padding: 15px;
     background-color: #a5a5a5;
     color: #131313;
@@ -63,8 +76,13 @@ button:hover {
 
     input, select, input[type="radio"] + label, input[type="checkbox"] + label {
         font-size: 1em;
-        padding: 8px;
+        padding: 4px;
         box-sizing: border-box; 
+    }
+
+    .options{
+        margin: 10px;
+        padding: 5px 0 20px 0;
     }
 
     button {
@@ -72,7 +90,18 @@ button:hover {
         font-size: 0.9em;
     }
 
-    h2 {
-        font-size: 1em;
+    h1 {
+        font-size: 2.3em;
+        margin: 20px 0;
     }
+
+    h2 {
+        font-size: 1.8em;
+
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+
+    
 }

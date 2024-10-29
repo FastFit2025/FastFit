@@ -3,129 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plano Alimentar</title>
+    <title>FastFit - Introduções</title>
     <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
 <body>
     <div id="app">
+
         <div id="screen1" class="screen active">
-            <h2>Qual o seu nome?</h2>
+            <h1>Qual o seu nome?</h1>
+
             <input type="text" id="nome" placeholder="Digite seu nome">
             <button onclick="goToNextScreen()">Próximo</button>
         </div>
 
         <div id="screen2" class="screen">
-            <h2>Qual seu objetivo?</h2>
 
-            <div>
-                <input type="radio" id="perder" name="objetivo" value="perder">
-                <label for="perder">Perder massa</label>
-            </div>
+            <h1>Qual seu objetivo?</h1>
 
-            <div>
-                <input type="radio" id="ganhar" name="objetivo" value="ganhar">
-                <label for="ganhar_peso">Ganhar massa</label>
-            </div>
+            <div id="optionsScreen2" class="options">
 
-            <div>
-                <input type="radio" id="manter" name="objetivo" value="manter">
-                <label for="manter">Manter massa</label>
-            </div>
+                <div>
+                    <input type="radio" id="perder" name="objetivo" value="perder">
+                    <label for="perder">Perder massa</label>
+                </div>
 
-            <div>
-                <input type="radio" id="restaurantes" name="objetivo" value="restaurantes">
-                <label for="restaurantes">Conhecer as opções de restaurantes</label>
+                <div>
+                    <input type="radio" id="ganhar" name="objetivo" value="ganhar">
+                    <label for="ganhar">Ganhar massa</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="manter" name="objetivo" value="manter">
+                    <label for="manter">Manter massa</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="restaurantes" name="objetivo" value="restaurantes">
+                    <label for="restaurantes">Conhecer as opções de restaurantes</label>
+                </div>
+
             </div>
 
             <button onclick="goToNextScreen()">Próximo</button>
+
             <button onclick="goToPreviousScreen()">Voltar</button>
+
         </div>
+
 
         <div id="screen3" class="screen">
-            <h2>Qual seu sexo?</h2>
-            <div>
-                <input type="radio" id="masculino" name="genero" value="masculino">
-                <label for="masculino">Masculino</label>
-            </div>
+            
+            <h1>Qual seu sexo?</h1>
 
-            <div>
-                <input type="radio" id="feminino" name="genero" value="feminino">
-                <label for="feminino">Feminino</label>
-            </div>
+            <div id="optionsScreen3" class="options">
 
-            <div>
-                <input type="radio" id="outro" name="genero" value="outro">
-                <label for="outro">Outro</label>
+                <div>
+                    <input type="radio" id="masculino" name="genero" value="masculino">
+                    <label for="masculino">Masculino</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="feminino" name="genero" value="feminino">
+                    <label for="feminino">Feminino</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="outro" name="genero" value="outro">
+                    <label for="outro">Outro</label>
+                </div>
             </div>
 
             <button onclick="goToNextScreen()">Próximo</button>
             <button onclick="goToPreviousScreen()">Voltar</button>
         </div>
 
+
         <div id="screen4" class="screen">
-            <h2>Qual sua idade?</h2>
+            <h1>Qual sua idade?</h1>
             <input type="number" id="idade" placeholder="Digite sua idade">
             <button onclick="goToNextScreen()">Próximo</button>
             <button onclick="goToPreviousScreen()">Voltar</button>
         </div>
 
         <div id="screen5" class="screen">
-            <h2>Qual sua altura (em cm)?</h2>
+            <h1>Qual sua altura <br> (em cm)?</h1>
             <input type="number" id="altura" placeholder="Digite sua altura">
             <button onclick="goToNextScreen()">Próximo</button>
             <button onclick="goToPreviousScreen()">Voltar</button>
         </div>
 
         <div id="screen6" class="screen">
-            <h2>Qual seu peso (em kg)?</h2>
+            <h1>Qual seu peso <br> (em kg)?</h1>
             <input type="number" id="peso" placeholder="Digite seu peso">
             <button onclick="goToNextScreen()">Próximo</button>
             <button onclick="goToPreviousScreen()">Voltar</button>
         </div>
 
         <div id="screen7" class="screen">
-            <h2>Você sabe seu percentual de gordura?</h2>
+            <h1>Você sabe seu percentual de gordura?</h1>
             <input type="number" id="gordura" placeholder="Digite o percentual de gordura (opcional)">
             <button onclick="goToNextScreen()">Próximo</button>
             <button onclick="goToPreviousScreen()">Voltar</button>
         </div>
 
         <div id="screen8" class="screen">
-            <h2>Nível de atividade</h2>
-            <div>
-                <input type="radio" id="baixo" name="atividade" value="baixo">
-                <label for="sedentario">Baixo</label>
+            <h1>Nível de atividade</h1>
+            <div id="optionsScreen8" class="options">
+
+                <div>
+                    <input type="radio" id="baixo" name="atividade" value="baixo">
+                    <label for="sedentario">Baixo</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="moderado" name="atividade" value="moderado">
+                    <label for="moderado">Moderado</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="intenso" name="atividade" value="intenso">
+                    <label for="intenso">Intenso</label>
+                </div>
             </div>
-            <div>
-                <input type="radio" id="moderado" name="atividade" value="moderado">
-                <label for="moderado">Moderado</label>
-            </div>
-            <div>
-                <input type="radio" id="intenso" name="atividade" value="intenso">
-                <label for="intenso">Intenso</label>
-            </div>
+
             <button onclick="goToNextScreen()">Próximo</button>
             <button onclick="goToPreviousScreen()">Voltar</button>
         </div>
 
         <div id="screen9" class="screen">
             <h1>Sugestão de Cardápio</h1>
+            
             <p>Aqui está um plano sugerido para você:</p>
+            
             <div id="cardapio">
+            
                 <div id="cafe">
                     <h2>Café da manhã</h2>
                     <p id="cafe_desc">...</p>
                 </div>
+            
                 <div id="almoco">
                     <h2>Almoço</h2>
                     <p id="almoco_desc">...</p>
                 </div>
+            
                 <div id="jantar">
                     <h2>Jantar</h2>
                     <p id="jantar_desc">...</p>
                 </div>
             </div>
+            
             <p>Quer fazer alguma mudança?</p>
+            
             <button onclick="adjustMenu()">Sim, Editar plano</button>
             <button onclick="finishApp()">Finalizar</button>
             <button onclick="goToPreviousScreen()">Voltar</button>
