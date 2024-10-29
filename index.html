@@ -16,23 +16,48 @@
 
         <div id="screen2" class="screen">
             <h2>Qual seu objetivo?</h2>
-            <select id="objetivo">
-                <option value="perder">Perder peso</option>
-                <option value="ganhar_peso">Ganhar peso</option>
-                <option value="ganhar_musculo">Ganhar músculo</option>
-                <option value="manter">Manter peso</option>
-                <option value="restaurantes">Conhecer as opções de restaurantes</option>
-            </select>
+
+            <div>
+                <input type="radio" id="perder" name="objetivo" value="perder">
+                <label for="perder">Perder massa</label>
+            </div>
+
+            <div>
+                <input type="radio" id="ganhar" name="objetivo" value="ganhar">
+                <label for="ganhar_peso">Ganhar massa</label>
+            </div>
+
+            <div>
+                <input type="radio" id="manter" name="objetivo" value="manter">
+                <label for="manter">Manter massa</label>
+            </div>
+
+            <div>
+                <input type="radio" id="restaurantes" name="objetivo" value="restaurantes">
+                <label for="restaurantes">Conhecer as opções de restaurantes</label>
+            </div>
+
             <button onclick="goToNextScreen()">Próximo</button>
             <button onclick="goToPreviousScreen()">Voltar</button>
         </div>
 
         <div id="screen3" class="screen">
-            <h2>Qual seu gênero?</h2>
-            <select id="genero">
-                <option value="masculino">Masculino</option>
-                <option value="feminino">Feminino</option>
-            </select>
+            <h2>Qual seu sexo?</h2>
+            <div>
+                <input type="radio" id="masculino" name="genero" value="masculino">
+                <label for="masculino">Masculino</label>
+            </div>
+
+            <div>
+                <input type="radio" id="feminino" name="genero" value="feminino">
+                <label for="feminino">Feminino</label>
+            </div>
+
+            <div>
+                <input type="radio" id="outro" name="genero" value="outro">
+                <label for="outro">Outro</label>
+            </div>
+
             <button onclick="goToNextScreen()">Próximo</button>
             <button onclick="goToPreviousScreen()">Voltar</button>
         </div>
@@ -67,29 +92,36 @@
 
         <div id="screen8" class="screen">
             <h2>Nível de atividade</h2>
-            <select id="atividade">
-                <option value="sedentario">Sedentário</option>
-                <option value="moderado">Moderado</option>
-                <option value="intenso">Intenso</option>
-            </select>
+            <div>
+                <input type="radio" id="baixo" name="atividade" value="baixo">
+                <label for="sedentario">Baixo</label>
+            </div>
+            <div>
+                <input type="radio" id="moderado" name="atividade" value="moderado">
+                <label for="moderado">Moderado</label>
+            </div>
+            <div>
+                <input type="radio" id="intenso" name="atividade" value="intenso">
+                <label for="intenso">Intenso</label>
+            </div>
             <button onclick="goToNextScreen()">Próximo</button>
             <button onclick="goToPreviousScreen()">Voltar</button>
         </div>
 
         <div id="screen9" class="screen">
-            <h2>Sugestão de Cardápio</h2>
+            <h1>Sugestão de Cardápio</h1>
             <p>Aqui está um plano sugerido para você:</p>
             <div id="cardapio">
                 <div id="cafe">
-                    <h3>Café da manhã</h3>
+                    <h2>Café da manhã</h2>
                     <p id="cafe_desc">...</p>
                 </div>
                 <div id="almoco">
-                    <h3>Almoço</h3>
+                    <h2>Almoço</h2>
                     <p id="almoco_desc">...</p>
                 </div>
                 <div id="jantar">
-                    <h3>Jantar</h3>
+                    <h2>Jantar</h2>
                     <p id="jantar_desc">...</p>
                 </div>
             </div>
@@ -97,10 +129,6 @@
             <button onclick="adjustMenu()">Sim, Editar plano</button>
             <button onclick="finishApp()">Finalizar</button>
             <button onclick="goToPreviousScreen()">Voltar</button>
-        </div>
-
-        <div id="screen_restaurantes" class="screen">
-            <h2>Opções de Restaurantes:</h2>
         </div>
     </div>
 
