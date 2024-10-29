@@ -1,14 +1,101 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastFit</title>
-    <link rel="stylesheet" href="assets/css/style.css"
+    <title>Plano Alimentar</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    
-    
+    <div id="app">
+        <div id="screen1" class="screen active">
+            <h2>Qual o seu nome?</h2>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+            <button onclick="goToNextScreen()">Próximo</button>
+        </div>
+
+        <div id="screen2" class="screen">
+            <h2>Qual seu objetivo?</h2>
+            <select id="objetivo">
+                <option value="perder">Perder peso</option>
+                <option value="ganhar_peso">Ganhar peso</option>
+                <option value="ganhar_musculo">Ganhar músculo</option>
+                <option value="manter">Manter peso</option>
+                <option value="restaurantes">Conhecer as opções de restaurantes</option>
+            </select>
+            <button onclick="goToPreviousScreen()">Voltar</button>
+            <button onclick="goToNextScreen()">Próximo</button>
+        </div>
+
+        <div id="screen3" class="screen">
+            <h2>Qual seu gênero?</h2>
+            <select id="genero">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+            <button onclick="goToPreviousScreen()">Voltar</button>
+            <button onclick="goToNextScreen()">Próximo</button>
+        </div>
+
+        <div id="screen4" class="screen">
+            <h2>Qual sua idade?</h2>
+            <input type="number" id="idade" placeholder="Digite sua idade">
+            <button onclick="goToPreviousScreen()">Voltar</button>
+            <button onclick="goToNextScreen()">Próximo</button>
+        </div>
+
+        <div id="screen5" class="screen">
+            <h2>Qual sua altura (em cm)?</h2>
+            <input type="number" id="altura" placeholder="Digite sua altura">
+            <button onclick="goToPreviousScreen()">Voltar</button>
+            <button onclick="goToNextScreen()">Próximo</button>
+        </div>
+
+        <div id="screen6" class="screen">
+            <h2>Qual seu peso (em kg)?</h2>
+            <input type="number" id="peso" placeholder="Digite seu peso">
+            <button onclick="goToPreviousScreen()">Voltar</button>
+            <button onclick="goToNextScreen()">Próximo</button>
+        </div>
+
+        <div id="screen7" class="screen">
+            <h2>Você sabe seu percentual de gordura?</h2>
+            <input type="number" id="gordura" placeholder="Digite o percentual de gordura (opcional)">
+            <button onclick="goToPreviousScreen()">Voltar</button>
+            <button onclick="goToNextScreen()">Próximo</button>
+        </div>
+
+        <div id="screen8" class="screen">
+            <h2>Nível de atividade</h2>
+            <select id="atividade">
+                <option value="sedentario">Sedentário</option>
+                <option value="moderado">Moderado</option>
+                <option value="intenso">Intenso</option>
+            </select>
+            <button onclick="goToPreviousScreen()">Voltar</button>
+            <button onclick="goToNextScreen()">Próximo</button>
+        </div>
+
+        <div id="screen9" class="screen">
+            <h2>Sugestão de Cardápio</h2>
+            <p>Aqui está um plano sugerido para você:</p>
+            <div id="cardapio"></div>
+            <p>Quer fazer alguma mudança?</p>
+            <button onclick="goToPreviousScreen()">Voltar</button>
+            <button onclick="adjustMenu()">Sim</button>
+            <button onclick="finishApp()">Finalizar</button>
+        </div>
+
+        <div id="screen_restaurantes" class="screen">
+            <h2>Opções de Restaurantes:</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
+
