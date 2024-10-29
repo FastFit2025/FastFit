@@ -5,81 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plano Alimentar</title>
     <link rel="stylesheet" href="assets/styles/styles.css">
-    <style>
-        body {
-            font-family: Helvetica, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        #app {
-            width: 90%;
-            max-width: 400px;
-            padding: 20px;
-        }
-
-        .screen {
-            display: none;
-        }
-
-        .screen.active {
-            display: block;
-        }
-
-        h2 {
-            font-size: 1.2em;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            font-size: 1em;
-            box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
-        }
-
-        button {
-            display: block;
-            width: 100%;
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Media Queries for Mobile Responsiveness */
-        @media (max-width: 600px) {
-            #app {
-                width: 100%;
-                padding: 10px;
-            }
-
-            input, select {
-                font-size: 1em;
-                padding: 8px;
-            }
-
-            button {
-                padding: 12px;
-                font-size: 0.9em;
-            }
-
-            h2 {
-                font-size: 1em;
-            }
-        }
-    </style>
 </head>
 <body>
     <div id="app">
@@ -98,8 +23,8 @@
                 <option value="manter">Manter peso</option>
                 <option value="restaurantes">Conhecer as opções de restaurantes</option>
             </select>
-            <button onclick="goToPreviousScreen()">Voltar</button>
             <button onclick="goToNextScreen()">Próximo</button>
+            <button onclick="goToPreviousScreen()">Voltar</button>
         </div>
 
         <div id="screen3" class="screen">

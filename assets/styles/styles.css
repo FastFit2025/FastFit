@@ -42,3 +42,24 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+@media (max-width: 600px) {
+    #app {
+        width: 100%;
+        padding: 10px;
+    }
+
+    input, select {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+}
