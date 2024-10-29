@@ -1,13 +1,86 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plano Alimentar</title>
     <link rel="stylesheet" href="assets/styles/styles.css">
-</head>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
 
+        #app {
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        .screen {
+            display: none;
+        }
+
+        .screen.active {
+            display: block;
+        }
+
+        h2 {
+            font-size: 1.2em;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 1em;
+            box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 600px) {
+            #app {
+                width: 100%;
+                padding: 10px;
+            }
+
+            input, select {
+                font-size: 1em;
+                padding: 8px;
+            }
+
+            button {
+                padding: 12px;
+                font-size: 0.9em;
+            }
+
+            h2 {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
 <body>
     <div id="app">
         <div id="screen1" class="screen active">
@@ -35,36 +108,36 @@
                 <option value="masculino">Masculino</option>
                 <option value="feminino">Feminino</option>
             </select>
-            <button onclick="goToPreviousScreen()">Voltar</button>
             <button onclick="goToNextScreen()">Próximo</button>
+            <button onclick="goToPreviousScreen()">Voltar</button>
         </div>
 
         <div id="screen4" class="screen">
             <h2>Qual sua idade?</h2>
             <input type="number" id="idade" placeholder="Digite sua idade">
-            <button onclick="goToPreviousScreen()">Voltar</button>
             <button onclick="goToNextScreen()">Próximo</button>
+            <button onclick="goToPreviousScreen()">Voltar</button>
         </div>
 
         <div id="screen5" class="screen">
             <h2>Qual sua altura (em cm)?</h2>
             <input type="number" id="altura" placeholder="Digite sua altura">
-            <button onclick="goToPreviousScreen()">Voltar</button>
             <button onclick="goToNextScreen()">Próximo</button>
+            <button onclick="goToPreviousScreen()">Voltar</button>
         </div>
 
         <div id="screen6" class="screen">
             <h2>Qual seu peso (em kg)?</h2>
             <input type="number" id="peso" placeholder="Digite seu peso">
-            <button onclick="goToPreviousScreen()">Voltar</button>
             <button onclick="goToNextScreen()">Próximo</button>
+            <button onclick="goToPreviousScreen()">Voltar</button>
         </div>
 
         <div id="screen7" class="screen">
             <h2>Você sabe seu percentual de gordura?</h2>
             <input type="number" id="gordura" placeholder="Digite o percentual de gordura (opcional)">
-            <button onclick="goToPreviousScreen()">Voltar</button>
             <button onclick="goToNextScreen()">Próximo</button>
+            <button onclick="goToPreviousScreen()">Voltar</button>
         </div>
 
         <div id="screen8" class="screen">
@@ -74,18 +147,31 @@
                 <option value="moderado">Moderado</option>
                 <option value="intenso">Intenso</option>
             </select>
-            <button onclick="goToPreviousScreen()">Voltar</button>
             <button onclick="goToNextScreen()">Próximo</button>
+            <button onclick="goToPreviousScreen()">Voltar</button>
         </div>
 
         <div id="screen9" class="screen">
             <h2>Sugestão de Cardápio</h2>
             <p>Aqui está um plano sugerido para você:</p>
-            <div id="cardapio"></div>
+            <div id="cardapio">
+                <div id="cafe">
+                    <h3>Café da manhã</h3>
+                    <p id="cafe_desc">...</p>
+                </div>
+                <div id="almoco">
+                    <h3>Almoço</h3>
+                    <p id="almoco_desc">...</p>
+                </div>
+                <div id="jantar">
+                    <h3>Jantar</h3>
+                    <p id="jantar_desc">...</p>
+                </div>
+            </div>
             <p>Quer fazer alguma mudança?</p>
-            <button onclick="goToPreviousScreen()">Voltar</button>
-            <button onclick="adjustMenu()">Sim</button>
+            <button onclick="adjustMenu()">Sim, Editar plano</button>
             <button onclick="finishApp()">Finalizar</button>
+            <button onclick="goToPreviousScreen()">Voltar</button>
         </div>
 
         <div id="screen_restaurantes" class="screen">
@@ -94,8 +180,6 @@
     </div>
 
     <script src="assets/scripts/script.js"></script>
-
 </body>
-
 </html>
 
