@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ <head>
+  <title>
+   FastFit
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+   }
+   .carousel button {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+   }
+  </style>
+ </head>
+ <body class="bg-white font-sans">
+  <div class="max-w-md mx-auto p-4">
+   <div class="text-center text-sm text-gray-600 mb-4">
+    Rua Maravilha Feltrin, 832...
+   </div>
+   <div class="relative mb-4">
+    <input class="w-full border rounded-full py-2 pl-10 pr-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Pesquisar Dietas, Restaurantes, Pratos..." type="text" value="Frango"/>
+    <i class="fas fa-search absolute left-3 top-2.5 text-gray-400">
+    </i>
+   </div>
+   <div class="carousel mb-6 space-x-2">
+    <button class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full">
+     Tudo
+    </button>
+    <button class="bg-green-500 text-white py-1 px-3 rounded-full">
+     Pratos
+    </button>
+    <button class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full">
+     Restaurantes
+    </button>
+    <button class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full">
+     Dietas
+    </button>
+    <button class="bg-gray-200 text-gray-700 py-1 px-3 rounded-full">
+     Sobremesas
+    </button>
+   </div>
+   <div class="text-lg font-semibold mb-4">
+    Pratos - “Frango”
+   </div>
+   <div class="grid grid-cols-2 gap-4">
+    <div class="relative">
+     <img alt="Nutricombo 2" class="w-full h-32 object-cover rounded-lg" height="150" src="/assets/prato-1.png" width="150"/>
+     <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-lg">
+      490kcal
+     </div>
+     <div class="flex items-center justify-between mt-2">
+      <div class="text-sm font-semibold">
+       Nutricombo 2
+      </div>
+      <div class="text-xs text-gray-500">
+       1.0 km
+      </div>
+     </div>
+     <div class="text-green-500 font-semibold">
+      R$ 24,90
+     </div>
+    </div>
+    <div class="relative">
+     <img alt="Arroz e Frango" class="w-full h-32 object-cover rounded-lg" height="150" src="/assets/prato-2.png" width="150"/>
+     <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-lg">
+      475kcal
+     </div>
+     <div class="flex items-center justify-between mt-2">
+      <div class="text-sm font-semibold">
+       Arroz e Frango
+      </div>
+      <div class="text-xs text-gray-500">
+       3.7 km
+      </div>
+     </div>
+     <div class="text-green-500 font-semibold">
+      R$ 25,00
+     </div>
+    </div>
+    <div class="relative">
+     <img alt="Sopa de Frango" class="w-full h-32 object-cover rounded-lg" height="150" src="/assets/prato-3.png" width="150"/>
+     <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-lg">
+      490kcal
+     </div>
+     <div class="flex items-center justify-between mt-2">
+      <div class="text-sm font-semibold">
+       Sopa de Frango
+      </div>
+      <div class="text-xs text-gray-500">
+       1.0 km
+      </div>
+     </div>
+     <div class="text-green-500 font-semibold">
+      R$ 24,90
+     </div>
+    </div>
+    <div class="relative">
+     <img alt="Salada Caeser" class="w-full h-32 object-cover rounded-lg" height="150" src="/assets/prato-4.png" width="150"/>
+     <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-lg">
+      405kcal
+     </div>
+     <div class="flex items-center justify-between mt-2">
+      <div class="text-sm font-semibold">
+       Salada Caeser
+      </div>
+      <div class="text-xs text-gray-500">
+       4.9 km
+      </div>
+     </div>
+     <div class="text-green-500 font-semibold">
+      R$ 23,90
+     </div>
+    </div>
+    <div class="relative">
+     <img alt="Arroz temperado" class="w-full h-32 object-cover rounded-lg" height="150" src="/assets/prato-5.png" width="150"/>
+     <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-lg">
+      495kcal
+     </div>
+     <div class="flex items-center justify-between mt-2">
+      <div class="text-sm font-semibold">
+       Arroz temperado
+      </div>
+      <div class="text-xs text-gray-500">
+       2.1 km
+      </div>
+     </div>
+     <div class="text-green-500 font-semibold">
+      R$ 26,90
+     </div>
+    </div>
+    <div class="relative">
+     <img alt="Salada com Frango" class="w-full h-32 object-cover rounded-lg" height="150" src="/assets/prato-6.png" width="150"/>
+     <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-lg">
+      440kcal
+     </div>
+     <div class="flex items-center justify-between mt-2">
+      <div class="text-sm font-semibold">
+       Salada com Frango
+      </div>
+      <div class="text-xs text-gray-500">
+       3.3 km
+      </div>
+     </div>
+     <div class="text-green-500 font-semibold">
+      R$ 22,90
+     </div>
+    </div>
+   </div>
+   <div class="fixed bottom-0 left-0 right-0 bg-white border-t">
+    <div class="flex justify-around py-2">
+     <div class="text-center">
+      <i class="fas fa-home text-gray-500">
+      </i>
+      <div class="text-xs text-gray-500">
+       Home
+      </div>
+     </div>
+     <div class="text-center">
+      <i class="fas fa-map-marker-alt text-gray-500">
+      </i>
+      <div class="text-xs text-gray-500">
+       Mapa
+      </div>
+     </div>
+     <div class="text-center">
+      <i class="fas fa-utensils text-gray-500">
+      </i>
+      <div class="text-xs text-gray-500">
+       Dieta
+      </div>
+     </div>
+     <div class="text-center">
+      <i class="fas fa-shopping-bag text-gray-500">
+      </i>
+      <div class="text-xs text-gray-500">
+       Pedido
+      </div>
+     </div>
+     <div class="text-center">
+      <i class="fas fa-user text-gray-500">
+      </i>
+      <div class="text-xs text-gray-500">
+       Perfil
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
