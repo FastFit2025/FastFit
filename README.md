@@ -1,4 +1,4 @@
-# FastFit-BD
+# FastFit
 
 A FastFit é uma startup criada durante o evento Garage Geração Tec 2024, promovido pelo Sebrae/PR, UniFatecie e IFPR. O objetivo da FastFit é ajudar seus usuários a manter uma alimentação saudável por meio de deliveries de alimentos saudáveis. Além disso, a plataforma rastreia as calorias e macronutrientes consumidos pelos usuários e recomenda pratos que se encaixam com seus planos de dieta.
 ## Modelo de Negócio
