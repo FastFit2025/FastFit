@@ -11,7 +11,7 @@ interface SecondaryButtonProps {
 
 const SecondaryButton: React.FC<SecondaryButtonProps> = ({ title, onPress, style, textStyle }) => {
   return (
-    <TouchableOpacity onPress={onPress} activeOpacity={0.8} style={[styles.buttonContainer, style]}>
+    <TouchableOpacity onPress={onPress} activeOpacity={0.5} style={[styles.buttonContainer, style]}>
       <View style={styles.button}>
         <Text style={[styles.buttonText, textStyle]}>{title}</Text>
       </View>
