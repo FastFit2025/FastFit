@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { View, StyleSheet, Image, Text, Alert } from "react-native";
+import { View, StyleSheet, Image, Text, Alert, Dimensions, ScrollView } from "react-native";
 import * as Font from "expo-font";
 import AppLoading from "expo-app-loading";
 import MainButton from "../src/Components/MainButton";
 import SecondaryButton from "../src/Components/SecondaryButton";
 import LightButton from "../src/Components/LightButton";
 import PressableText from "@/src/Components/PressableText";
+
+const { width, height } = Dimensions.get("window");
 
 const loadFonts = async () => {
   await Font.loadAsync({
@@ -30,14 +32,18 @@ export default function Index() {
   };
 
   return (
-    <View style={styles.container}>
-      <Image
-        source={require("../assets/images/stock-images/malhado_segurando_marmita.png")}
-        style={styles.image}
-      />
+    <ScrollView contentContainerStyle={styles.container}>
+      <View style={styles.imageContainer}>
+        <Image
+          source={require("../assets/images/stock-images/malhado_segurando_marmita.png")}
+          style={styles.image}
+          resizeMode="cover"
+        />
+      </View>
       <Image
         source={require("../assets/images/logos/fastfit-verde.png")}
         style={styles.logo}
+        resizeMode="contain"
       />
       <View style={styles.buttonContainer}>
         <MainButton
@@ -66,12 +72,12 @@ export default function Index() {
           <LightButton
             onPress={() => showAlert("Entrar com Google clicado")}
             imageSource={require("../assets/images/icons/google.png")}
-            style={{ width: 155 }} // Add margin to separate the buttons
+            style={{ width: width * 0.4 }}
           />
           <LightButton
             onPress={() => showAlert("Entrar com Apple clicado")}
             imageSource={require("../assets/images/icons/apple.png")}
-            style={{ width: 155 }}
+            style={{ width: width * 0.4 }}
           />
         </View>
       </View>
@@ -80,44 +86,43 @@ export default function Index() {
         text="Pular por enquanto"
         onPress={() => showAlert("Pular por enquanto clicado")}
       />
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     alignItems: "center",
-    backgroundColor: "white"
+    backgroundColor: "white",
+    paddingVertical: 20,
   },
-  image: {
+  imageContainer: {
     position: "absolute",
     top: 0,
     width: "100%",
-    height: 470,
-    resizeMode: "cover"
+    height: height * 0.4,
+  },
+  image: {
+    width: "100%",
+    height: "100%",
   },
   logo: {
-    position: "absolute",
-    top: 24,
-    width: 200,
-    height: 100,
-    resizeMode: "contain"
+    width: width * 0.5,
+    height: height * 0.1,
+    marginBottom: 20,
+    marginTop: height * 0.4, // Adjust to position below the image
   },
   buttonContainer: {
-    position: "absolute",
-    top: 485,
-    bottom: 201,
-    left: 5,
-    right: 5,
+    width: "90%",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    marginBottom: 20,
   },
   enterWith: {
-    position: "absolute",
-    bottom: 110, // !
     width: "100%",
-    alignItems: "center"
+    alignItems: "center",
+    marginBottom: 20,
   },
   lineContainer: {
     flexDirection: "row",
@@ -125,10 +130,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     width: "100%",
     marginVertical: 5,
-    bottom: 7
   },
   line: {
-    width: 110,
+    width: width * 0.3,
     height: 1.5,
   },
   textEntreCom: {
@@ -137,17 +141,17 @@ const styles = StyleSheet.create({
     fontFamily: "Urbanist-SemiBold",
     color: "#6a707c",
     textAlign: "center",
-    marginHorizontal: 10
+    marginHorizontal: 10,
   },
   lightButtonRow: {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    top: 10
+    marginTop: 10,
   },
   pressableText: {
     position: "absolute",
-    bottom: 45,
-    right: 20
+    bottom: 40,
+    right: 30,
   },
 });

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Text, StyleSheet, TouchableOpacity, ViewStyle, StyleProp } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity, ViewStyle, StyleProp, Dimensions } from 'react-native';
+
+const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   pularPorEnquanto: {

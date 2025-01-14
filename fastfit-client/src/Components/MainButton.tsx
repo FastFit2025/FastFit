@@ -1,12 +1,13 @@
 import React from "react";
-import { Text, StyleSheet, TouchableOpacity, View, GestureResponderEvent, StyleProp, ViewStyle, TextStyle } from "react-native";
+import { Text, StyleSheet, TouchableOpacity, View, GestureResponderEvent, StyleProp, ViewStyle, TextStyle, Dimensions } from "react-native";
 
-// Define the types for the props
+const { width, height } = Dimensions.get("window");
+
 interface MainButtonProps {
   title: string;
   onPress: (event: GestureResponderEvent) => void;
-  style?: StyleProp<ViewStyle>;  // Optional style for the button container
-  textStyle?: StyleProp<TextStyle>; // Optional style for the text
+  style?: StyleProp<ViewStyle>;
+  textStyle?: StyleProp<TextStyle>;
 }
 
 const MainButton: React.FC<MainButtonProps> = ({ title, onPress, style, textStyle }) => {
@@ -21,12 +22,12 @@ const MainButton: React.FC<MainButtonProps> = ({ title, onPress, style, textStyl
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    width: "100%",
+    width: width * 0.9,
     paddingHorizontal: 20,
   },
   button: {
     borderRadius: 16,
-    height: 56,
+    height: height * 0.07,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#5dcb6a",
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     fontFamily: "Montserrat-SemiBold",
     color: "#fff",
-    textAlign: "left",
+    textAlign: "center",
   },
 });
 

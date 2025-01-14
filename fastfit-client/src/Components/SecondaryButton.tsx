@@ -1,7 +1,8 @@
 import React from "react";
-import { Text, StyleSheet, TouchableOpacity, View, GestureResponderEvent, StyleProp, ViewStyle, TextStyle } from "react-native";
+import { Text, StyleSheet, TouchableOpacity, View, GestureResponderEvent, StyleProp, ViewStyle, TextStyle, Dimensions } from "react-native";
 
-// Define the types for the props
+const { width, height } = Dimensions.get("window");
+
 interface SecondaryButtonProps {
   title: string;
   onPress: (event: GestureResponderEvent) => void;
@@ -21,12 +22,12 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({ title, onPress, style
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    width: "100%",
+    width: width * 0.9,
     paddingHorizontal: 20,
   },
   button: {
     borderRadius: 16,
-    height: 56,
+    height: height * 0.07,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#fff",

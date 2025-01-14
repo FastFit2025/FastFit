@@ -1,13 +1,14 @@
 import React from "react";
-import { Text, StyleSheet, TouchableOpacity, View, GestureResponderEvent, StyleProp, ViewStyle, TextStyle, Image } from "react-native";
+import { Text, StyleSheet, TouchableOpacity, View, GestureResponderEvent, StyleProp, ViewStyle, TextStyle, Image, Dimensions } from "react-native";
 
-// Define the types for the props
+const { width, height } = Dimensions.get("window");
+
 interface LightButtonProps {
   title?: string;
   onPress: (event: GestureResponderEvent) => void;
-  style?: StyleProp<ViewStyle>;  // Optional style for the button container
-  textStyle?: StyleProp<TextStyle>; // Optional style for the text
-  imageSource: any; // Image source for the button
+  style?: StyleProp<ViewStyle>;
+  textStyle?: StyleProp<TextStyle>;
+  imageSource: any;
 }
 
 const LightButton: React.FC<LightButtonProps> = ({ title, onPress, style, textStyle, imageSource }) => {
@@ -15,7 +16,7 @@ const LightButton: React.FC<LightButtonProps> = ({ title, onPress, style, textSt
     <TouchableOpacity onPress={onPress} activeOpacity={0.5} style={[styles.buttonContainer, style]}>
       <View style={styles.button}>
         <Image source={imageSource} style={styles.image} />
-        <Text style={[styles.buttonText, textStyle]}>{title}</Text>
+        {title && <Text style={[styles.buttonText, textStyle]}>{title}</Text>}
       </View>
     </TouchableOpacity>
   );
@@ -23,29 +24,30 @@ const LightButton: React.FC<LightButtonProps> = ({ title, onPress, style, textSt
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    width: "100%",
+    width: width * 0.9,
     paddingHorizontal: 20,
   },
   button: {
     borderRadius: 8,
-    height: 56,
+    height: height * 0.07,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#fff",
     borderWidth: 1,
     borderColor: "#e8ecf4",
-    flexDirection: "row", // Align image and text horizontally
+    flexDirection: "row",
   },
   buttonText: {
     fontSize: 15,
     fontWeight: "600",
     fontFamily: "Urbanist-SemiBold",
     color: "#1e232c",
-    textAlign: "center", 
+    textAlign: "center",
+    marginLeft: 10,
   },
   image: {
-    width: 27, // Adjust the size of the image as needed
-    height: 27, // Adjust the size of the image as needed
+    width: 27,
+    height: 27,
   },
 });
 
