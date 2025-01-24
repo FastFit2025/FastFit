@@ -6,6 +6,7 @@ import MainButton from "../src/Components/MainButton";
 import SecondaryButton from "../src/Components/SecondaryButton";
 import LightButton from "../src/Components/LightButton";
 import PressableText from "@/src/Components/PressableText";
+import { useRouter } from 'expo-router';
 
 const { width, height } = Dimensions.get("window");
 
@@ -18,6 +19,7 @@ const loadFonts = async () => {
 
 export default function Index() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     loadFonts().then(() => setFontsLoaded(true));
@@ -48,7 +50,7 @@ export default function Index() {
       <View style={styles.buttonContainer}>
         <MainButton
           title="Já tenho uma conta"
-          onPress={() => showAlert("Já tenho uma conta clicado")}
+          onPress={() => router.push('../auth/login')}
           style={{ marginBottom: 15 }}
         />
         <SecondaryButton
